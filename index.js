@@ -1,9 +1,11 @@
 //import the readline module 
-const readline = require('node:readline/promises');
-const { stdin: input, stdout: output } = require('node:process');
+const readline = require('readline/promises');
 const chalk = require('chalk') //import the chalk library to format output
 
-const rl = readline.createInterface({ input, output });
+const rl = readline.createInterface({ 
+    input: process.stdin,
+    output: process.stdout
+ });
 
 //make an array of objects for the trivia questions
 const trivia = [
